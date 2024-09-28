@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Finance Tracker</h1>
+        </header>
+
+        <section id="inputs">
+            <div class="input-section">
+                <h2>Record Expense</h2>
+                <form id="expense-form">
+                    <input type="date" id="expense-date" placeholder="Date" required>
+                    <input type="text" id="expense-desc" placeholder="Description" required>
+                    <input type="number" id="expense-amount" placeholder="Amount" required>
+                    <input type="text" id="expense-method" placeholder="Payment Method" required>
+                    <textarea id="expense-notes" placeholder="Notes"></textarea>
+                    <button type="submit">Add Expense</button>
+                </form>
+            </div>
+
+            <div class="input-section">
+                <h2>Record Income</h2>
+                <form id="income-form">
+                    <input type="date" id="income-date" placeholder="Date" required>
+                    <input type="text" id="income-source" placeholder="Source" required>
+                    <input type="number" id="income-amount" placeholder="Amount" required>
+                    <textarea id="income-notes" placeholder="Notes"></textarea>
+                    <button type="submit">Add Income</button>
+                </form>
+            </div>
+
+            <div class="input-section">
+                <h2>Record Investment</h2>
+                <form id="investment-form">
+                    <input type="date" id="investment-date" placeholder="Date" required>
+                    <input type="text" id="investment-type" placeholder="Investment Type" required>
+                    <input type="number" id="investment-quantity" placeholder="Quantity" required>
+                    <input type="number" id="investment-share-value" placeholder="Share Value" required>
+                    <input type="number" id="investment-current-value" placeholder="Current Value">
+                    <textarea id="investment-notes" placeholder="Notes"></textarea>
+                    <button type="submit">Add Investment</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="display">
+            <h2>Entries</h2>
+            <div class="entries">
+                <div id="expense-entries"></div>
+                <div id="income-entries"></div>
+                <div id="investment-entries"></div>
+            </div>
+        </section>
+
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>Total Expenses: <span id="total-expenses">0</span></p>
+            <p>Total Income: <span id="total-income">0</span></p>
+            <p>Total Investments: <span id="total-investments">0</span></p>
+            <p>Overall Profit/Loss: <span id="overall-profit-loss">0</span></p>
+        </section>
+
+        <button id="generate-pdf">Generate PDF</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
